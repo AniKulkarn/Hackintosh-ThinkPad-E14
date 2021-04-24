@@ -1,0 +1,1 @@
+To download the BaseSystem.dmg and BaseSystem.chunklist, follow the instructions in the OpenCore guide in the following section - https://dortania.github.io/OpenCore-Install-Guide/installer-guide/winblows-install.html#downloading-macos
