@@ -21,7 +21,7 @@ Dortania's OpenCore Install Guide - https://dortania.github.io/OpenCore-Install-
 		- Reformatted the hard drive partition to APFS and reinstalled macOS Big Sur on HDD. 
 
 - Restarted after installation. Booted from USB again and selected "Install macOS Big Sur on HDD" from OpenCore boot options. No problems at this stage. 
-- While installation, computer restarted several times. When restart occurs, note that you have to hit F12 and boot from USB every time. Somehow, there is a bug the BIOS boot order settings. I have given USB first preference but it always boots into Windows first. 
+- While installation, computer restarted several times. When restart occurs, note that you have to hit F12 and boot from USB every time. I later changed my boot order to boot from USB as the first option.  
 - After installation complete, macOS setup initiated. Setup was completed successfully with ethernet connection. Apple ID was signed in successfully. 
 
 ## Problems after first successful bootup
