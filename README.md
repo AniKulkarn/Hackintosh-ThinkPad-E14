@@ -40,15 +40,14 @@ Dortania's OpenCore Install Guide - https://dortania.github.io/OpenCore-Install-
 - Ethernet is working. 
 
 ## Successful Wi-Fi Patch
-- Debugging: AirportItlwm.kext was in a subfolder which ProperTree apparently could not get in the snapshot. As a result, the config.plist file did not have AirportItlwm.kext in the Kernels. 
-- Solution: After moving the AirportItlwm.kext to the "EFI/OC/Kexts" folder, updated the config.plist by a clean snapshot. 
-- Solution worked. Wi-Fi access points were visible. Could connect to the internet through a 5GHz network. 
+- **Debugging:** AirportItlwm.kext was in a subfolder which ProperTree apparently could not get in the snapshot. As a result, the config.plist file did not have AirportItlwm.kext in the Kernels. 
+- **Solution:** After moving the AirportItlwm.kext to the "EFI/OC/Kexts" folder, updated the config.plist by a clean snapshot. Solution worked. Wi-Fi access points were visible. Could connect to the internet through a 5GHz network. 
 
 ## Successful iGPU and Backlight Patch
-- Debugging for iGPU not detecting: iGPU Intel (U)HD 620 needs device-id faking in "DeviceProperties" section of config.plist. Apart from this, config.plist lacked "PciRoot(0x0)/Pci(0x2,0x0)" child under "DeviceProperties/Add" as it wasn't there in Sample.plist. 
-- The device-id and other information was filled according to this section of the OpenCore install guide - https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/coffee-lake-plus.html#deviceproperties. "PciRoot(0x0)/Pci(0x2,0x0)" was added as a child to "DeviceProperties/Add".
-- Debugging for backlight problem: The order of SSDT was incorrect. 
-- Solution: Order of SSDT .aml files was edited in config.plist:
+- **Debugging for iGPU not detecting:** iGPU Intel (U)HD 620 needs device-id faking in "DeviceProperties" section of config.plist. Apart from this, config.plist lacked "PciRoot(0x0)/Pci(0x2,0x0)" child under "DeviceProperties/Add" as it wasn't there in Sample.plist. 
+- **Solution:** The device-id and other information was filled according to this section of the OpenCore install guide - https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/coffee-lake-plus.html#deviceproperties. "PciRoot(0x0)/Pci(0x2,0x0)" was added as a child to "DeviceProperties/Add".
+- **Debugging for backlight problem:** The order of SSDT was incorrect. 
+- **Solution:** Order of SSDT .aml files was edited in config.plist:
 	1. SSDT-XOSI.aml
 	2. SSDT-AWAC.aml
 	3. SSDT-EC-USBX-LAPTOP.aml
