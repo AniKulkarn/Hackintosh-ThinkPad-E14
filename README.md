@@ -38,3 +38,8 @@ Dortania's OpenCore Install Guide - https://dortania.github.io/OpenCore-Install-
 - Keyboard is working. 
 - iServices working. 
 - Ethernet is working. 
+
+## Successful Wi-Fi Patch
+- Debugging: AirportItlwm.kext was in a subfolder which ProperTree apparently could not get in the snapshot. As a result, the config.plist file did not have AirportItlwm.kext in the Kernels. 
+- Solution: After moving the AirportItlwm.kext to the "EFI/OC/Kexts" folder, updated the config.plist by a clean snapshot. 
+- Solution worked. Wi-Fi access points were visible. Could connect to the internet through a 5GHz network. 
