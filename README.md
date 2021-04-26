@@ -41,7 +41,7 @@ Dortania's OpenCore Install Guide - https://dortania.github.io/OpenCore-Install-
 
 ## Successful Wi-Fi Patch
 - **Debugging:** AirportItlwm.kext was in a subfolder which ProperTree apparently could not get in the snapshot. As a result, the config.plist file did not have AirportItlwm.kext in the Kernels. 
-- **Solution:** After moving the AirportItlwm.kext to the "EFI/OC/Kexts" folder, updated the config.plist by a clean snapshot. Solution worked. Wi-Fi access points were visible. Could connect to the internet through a 5GHz network. 
+- **Solution:** After moving the AirportItlwm.kext to the "EFI/OC/Kexts" folder, updated the config.plist by a clean snapshot. Solution worked. Wi-Fi access points were visible. Could connect to the internet through a 5GHz network. However, internet gets disconnected after connected for about half an hour or so. Turning off Wi-Fi and turning it on works rarely. Changing Wi-Fi network temporarily to another network and switching it back to the first one worked.  
 
 ## Successful iGPU and Backlight Patch
 - **Debugging for iGPU not detecting:** iGPU Intel (U)HD 620 needs device-id faking in "DeviceProperties" section of config.plist. Apart from this, config.plist lacked "PciRoot(0x0)/Pci(0x2,0x0)" child under "DeviceProperties/Add" as it wasn't there in Sample.plist. 
