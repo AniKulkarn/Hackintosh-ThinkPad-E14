@@ -30,9 +30,9 @@ Dortania's OpenCore Install Guide - https://dortania.github.io/OpenCore-Install-
 - [ ] Touchpad left-click is not working. Also, touch-clicks are not working. Only press-clicks are working. Gestures seem to be working fine. 
 - [x] Audio (both, speakers and headphone jack) is not working. 
 - [x] Wi-Fi is not working. 
-- [ ] Bluetooth is not working. 
+- [x] Bluetooth is not working. 
 - [ ] Battery management not showing up. 
-- [ ] Webcam is not getting detected. 
+- [x] Webcam is not getting detected. 
 
 Other problems: Too much time for booting up (almost 3-4 minutes). Verbose gets irritating after a while :P
 
@@ -66,4 +66,10 @@ P. S. Checklist is added to denote live debugging process. Ticked items are succ
 		6. Reboot system and check sound. 
 	2. Permanently fixing audio:
 		1. Follow instructions mentioned here - https://dortania.github.io/OpenCore-Post-Install/universal/audio.html#making-layout-id-more-permanent.
-		2. While removing `boot-arg` in config.plist, keep `-v debug=0x100 keepsyms=1`. Remove `alcid=xxx`.  
+		2. While removing `boot-arg` in config.plist, keep `-v debug=0x100 keepsyms=1`. Remove `alcid=xxx`.
+
+## Successful Bluetooth and Webcam patch
+- **Debugging for BT and Webcam problem:** All USB ports were not being recognised for some reason. Saw that using https://github.com/corpnewt/USBMap.
+- **Solution:** Refered https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html. Thanks to https://github.com/seven-of-eleven/Lenovo-ThinkPad-L13-Yoga-Hackintosh#post-install. I was able to relate to the problem and solve it. 
+	1. Added https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-RHUB.aml to ACPI folder and updated config.plist using OC-Screenshot. Rebooted the system and found out all USB ports were getting detected on USBMap tool. 
+	2. Created USBMap.kext using USBMap tool as instructed on the Dortania guide. Added this to `EFI/OC/Kexts` and deleted USBInjectAll.kext. Updated the config.plist using OC-Screenshot. Rebooted. Problem solved. 
