@@ -61,4 +61,4 @@ Dortania's OpenCore Install Guide - https://dortania.github.io/OpenCore-Install-
 		6. Reboot system and check sound. 
 	2. Permanently fixing audio:
 		1. Follow instructions mentioned here - https://dortania.github.io/OpenCore-Post-Install/universal/audio.html#making-layout-id-more-permanent.
-		2. While removing `boot-arg` in config.plist, remove all contents of the String but DO NOT DELETE the complete child component. 
+		2. While removing `boot-arg` in config.plist, keep `-v debug=0x100 keepsyms=1`. Remove `alcid=xxx`.  
