@@ -25,14 +25,15 @@ Dortania's OpenCore Install Guide - https://dortania.github.io/OpenCore-Install-
 - After installation complete, macOS setup initiated. Setup was completed successfully with ethernet connection. Apple ID was signed in successfully. 
 
 ## Problems after first successful bootup
-- Graphics are too poor. iGPU is most probably not getting detected. In System Info, it's showing "Graphics 7MB" which surely is a problem. 
-- Touchpad left-click is not working. Also, touch-clicks are not working. Only press-clicks are working. Gestures seem to be working fine. 
-- Audio (both, speakers and headphone jack) is not working. 
-- Wi-Fi is not working. 
-- Bluetooth is not working. 
-- Battery management not showing up. 
-- Webcam is not getting detected. 
-- Too much time for booting up (almost 3-4 minutes). Verbose gets irritating after a while :P
+- [x] Graphics are too poor. iGPU is most probably not getting detected. In System Info, it's showing "Graphics 7MB" which surely is a problem. 
+- [x] Backlight control not working.
+- [ ] Touchpad left-click is not working. Also, touch-clicks are not working. Only press-clicks are working. Gestures seem to be working fine. 
+- [x] Audio (both, speakers and headphone jack) is not working. 
+- [x] Wi-Fi is not working. 
+- [ ] Bluetooth is not working. 
+- [ ] Battery management not showing up. 
+- [ ] Webcam is not getting detected. 
+P. S. Not that this is a genuine problem; too much time for booting up (almost 3-4 minutes). Verbose gets irritating after a while :P
 
 ## Working things after first successful bootup
 - USB mouse is working. USB drives are getting detected. 
