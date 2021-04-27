@@ -47,9 +47,18 @@ Dortania's OpenCore Install Guide - https://dortania.github.io/OpenCore-Install-
 - **Debugging for iGPU not detecting:** iGPU Intel (U)HD 620 needs device-id faking in "DeviceProperties" section of config.plist. Apart from this, config.plist lacked "PciRoot(0x0)/Pci(0x2,0x0)" child under "DeviceProperties/Add" as it wasn't there in Sample.plist. 
 - **Solution:** The device-id and other information was filled according to this section of the OpenCore install guide - https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/coffee-lake-plus.html#deviceproperties. "PciRoot(0x0)/Pci(0x2,0x0)" was added as a child to "DeviceProperties/Add".
 - **Debugging for backlight problem:** The order of SSDT was incorrect. 
-- **Solution:** Order of SSDT .aml files was edited in config.plist:
-	1. SSDT-XOSI.aml
-	2. SSDT-AWAC.aml
-	3. SSDT-EC-USBX-LAPTOP.aml
-	4. SSDT-PLUG-DRTNIA.aml
-	5. SSDT-PNLF-CFL.aml
+- **Solution:** Solving the DeviceProperties bug solved this problem too. 
+
+## Successful sound patch
+- **Debugging for sound problem:** Sound card details were not identified. Hence, sound card ID and layout-id was not known. 
+- **Solution:** 
+	1. Testing layout-id:
+		1. Ran Live Ubunto distro on computer through USB. 
+		2. In terminal, ran `cat /proc/asound/card0/codec#0`. 
+		3. Noted down the `Codec: Conexant CX8070`. 
+		4. Went to https://github.com/acidanthera/AppleALC/wiki/Supported-codecs and noted down the layout-id for CX8070 vendor. 
+		5. Then, updated `alcid=15` under "NVRAM" section of config.plist. 
+		6. Reboot system and check sound. 
+	2. Permanently fixing audio:
+		1. Follow instructions mentioned here - https://dortania.github.io/OpenCore-Post-Install/universal/audio.html#making-layout-id-more-permanent.
+		2. While removing `boot-arg` in config.plist, remove all contents of the String but DO NOT DELETE the complete child component. 
