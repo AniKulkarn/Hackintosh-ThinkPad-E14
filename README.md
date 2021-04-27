@@ -27,7 +27,7 @@ Dortania's OpenCore Install Guide - https://dortania.github.io/OpenCore-Install-
 ## Problems after first successful bootup
 - [x] Graphics are too poor. iGPU is most probably not getting detected. In System Info, it's showing "Graphics 7MB" which surely is a problem. 
 - [x] Backlight control not working.
-- [ ] Touchpad left-click is not working. Also, touch-clicks are not working. Only press-clicks are working. Gestures seem to be working fine. 
+- [ ] Touchpad left-click is not working: instead, when left-click is hit, OS thinks it's a force touch (it's super annoying). Also, touch-clicks are not working. Only press-clicks are working. Gestures seem to be working fine. 
 - [x] Audio (both, speakers and headphone jack) is not working. 
 - [x] Wi-Fi is not working. 
 - [x] Bluetooth is not working. 
