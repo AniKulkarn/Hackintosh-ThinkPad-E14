@@ -33,7 +33,6 @@ Dortania's OpenCore Install Guide - https://dortania.github.io/OpenCore-Install-
 - [x] Bluetooth is not working. 
 - [x] Battery management not showing up. 
 - [x] Webcam is not getting detected. 
-- [ ] Keyboard Brightness Keys not working.
 
 Other problems: Too much time for booting up (almost 3-4 minutes). Verbose gets irritating after a while :P
 
