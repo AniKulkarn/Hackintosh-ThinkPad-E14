@@ -27,11 +27,11 @@ Dortania's OpenCore Install Guide - https://dortania.github.io/OpenCore-Install-
 ## Problems after first successful bootup
 - [x] Graphics are too poor. iGPU is most probably not getting detected. In System Info, it's showing "Graphics 7MB" which surely is a problem. 
 - [x] Backlight control not working.
-- [ ] Touchpad left-click is not working: instead, when left-click is hit, OS thinks it's a force touch (it's super annoying). Also, touch-clicks are not working. Only press-clicks are working. Gestures seem to be working fine. 
+- [x] Touchpad left-click is not working: instead, when left-click is hit, OS thinks it's a force touch (it's super annoying). Also, touch-clicks are not working. Only press-clicks are working. Gestures seem to be working fine. (This got fixed mysteriously after battery patch)
 - [x] Audio (both, speakers and headphone jack) is not working. 
 - [x] Wi-Fi is not working. 
 - [x] Bluetooth is not working. 
-- [ ] Battery management not showing up. 
+- [x] Battery management not showing up. 
 - [x] Webcam is not getting detected. 
 
 Other problems: Too much time for booting up (almost 3-4 minutes). Verbose gets irritating after a while :P
@@ -73,3 +73,10 @@ P. S. Checklist is added to denote live debugging process. Ticked items are succ
 - **Solution:** Refered https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html. Thanks to https://github.com/seven-of-eleven/Lenovo-ThinkPad-L13-Yoga-Hackintosh#post-install. I was able to relate to the problem and solve it. 
 	1. Added https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-RHUB.aml to ACPI folder and updated config.plist using OC-Screenshot. Rebooted the system and found out all USB ports were getting detected on USBMap tool. 
 	2. Created USBMap.kext using USBMap tool as instructed on the Dortania guide. Added this to `EFI/OC/Kexts` and deleted USBInjectAll.kext. Updated the config.plist using OC-Screenshot. Rebooted. Problem solved. 
+
+## Successful battery patch
+- **Debugging:** Battery monitoring requires DSDT patching.
+- **Solution:** Refered this Reddit thread - https://www.reddit.com/r/hackintosh/comments/m2sz5b/thinkpad_e15_battery_indicator_not_working_after/?utm_source=share&utm_medium=web2x&context=3
+	1. Downloaded SSDT-BAT.aml and config.plist from the https://drive.google.com/drive/folders/1Oc5RFBLt3o3n8GT9-EAgDL_VXyqRiWqj?usp=sharing. 
+	2. Pasted SSDT-BAT.aml in `EFI/OC/ACPI` of the USB Flash Drive. Copied DSDT patches from downloaded config.plist and pasted them in my config.plist file located on the USB Flash Drive using Text Editor. 
+	3. Rebooted. Problem was fixed. Mysteriously, even TrackPad gestures problem was solved. 
