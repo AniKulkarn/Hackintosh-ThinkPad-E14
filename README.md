@@ -81,3 +81,6 @@ P. S. Checklist is added to denote live debugging process. Ticked items are succ
 	1. Downloaded SSDT-BAT.aml and config.plist from the https://drive.google.com/drive/folders/1Oc5RFBLt3o3n8GT9-EAgDL_VXyqRiWqj?usp=sharing. 
 	2. Pasted SSDT-BAT.aml in `EFI/OC/ACPI` of the USB Flash Drive. Copied DSDT patches from downloaded config.plist and pasted them in my config.plist file located on the USB Flash Drive using Text Editor. 
 	3. Rebooted. Problem was fixed. Mysteriously, even TrackPad gestures problem was solved. 
+
+## Cosmetic changes
+- Followed instructions as per https://dortania.github.io/OpenCore-Post-Install/cosmetic/verbose.html#macos-decluttering.
