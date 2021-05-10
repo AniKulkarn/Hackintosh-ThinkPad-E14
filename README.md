@@ -36,7 +36,7 @@ Dortania's OpenCore Install Guide - https://dortania.github.io/OpenCore-Install-
 - [ ] Sleep/Wake problem. When I press the power button, nothing happens. When I click on the Sleep option from the Menu Bar, the desktop goes off, the power button blinks once, Bluetooth disconnects and connects again, nothing happens then (the power button light stays on). Now if I press the power button, the system wakes up but my touchpad stops working. Even when I close the lid, only Music playback stops but the power button doesn't start blinking. Only after 15 minutes, if I leave the computer idle, it goes to sleep - the power button starts blinking. When I press the power button, the system wakes up and starts working normally.
 - [ ] HDMI is not working. Nothing happens when HDMI is plugged in.
 
-Other problems: Too much time for booting up (almost 3-4 minutes). Verbose gets irritating after a while :P
+Other problems: Too much time for booting up (almost 3-4 minutes). 
 
 P. S. Checklist is added to denote live debugging process. Ticked items are successfully debugged items. Details about debugging is mentioned in this README file itself. 
 
