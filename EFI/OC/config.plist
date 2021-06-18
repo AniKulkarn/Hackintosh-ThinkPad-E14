@@ -1472,8 +1472,6 @@
 			<string>x86_64</string>
 			<key>KernelCache</key>
 			<string>Auto</string>
-			<key>PickerVariant</key>
-			<string>Auto</string>
 		</dict>
 	</dict>
 	<key>Misc</key>
@@ -1499,7 +1497,7 @@
 			<key>PickerMode</key>
 			<string>External</string>
 			<key>PickerVariant</key>
-			<string>Auto</string>
+			<string>Acidanthera\GoldenGate</string>
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
@@ -1621,7 +1619,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 debug=0x100</string>
+				<string>keepsyms=1 debug=0x100</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1766,7 +1764,7 @@
 			<key>MinimumVolume</key>
 			<integer>70</integer>
 			<key>PlayChime</key>
-			<string>Enabled</string>
+			<true/>
 			<key>ResetTrafficClass</key>
 			<false/>
 			<key>SetupDelay</key>
