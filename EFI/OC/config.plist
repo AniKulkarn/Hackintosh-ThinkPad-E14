@@ -576,7 +576,7 @@
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-								<key>#enable-hdmi-dividers-fix</key>
+				<key>#enable-hdmi-dividers-fix</key>
 				<data>AQAAAA==</data>
 				<key>#enable-hdmi20</key>
 				<data>AQAAAA==</data>
@@ -589,6 +589,10 @@
 				<key>framebuffer-con2-busid</key>
 				<data>AgAAAA==</data>
 				<key>framebuffer-con2-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebutter-con2-has-lspcon</key>
+				<data>AQAAAA==</data>
+				<key>framebutter-con2-preferred-lspcon-mode</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con2-type</key>
 				<data>AAgAAA==</data>
@@ -1499,7 +1503,7 @@
 			<key>PickerMode</key>
 			<string>External</string>
 			<key>PickerVariant</key>
-			<string>Acidanthera\GoldenGate</string>
+			<string>Modern</string>
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
@@ -1621,7 +1625,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>keepsyms=1 debug=0x100</string>
+				<string>-v keepsyms=1 debug=0x100</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1766,7 +1770,7 @@
 			<key>MinimumVolume</key>
 			<integer>70</integer>
 			<key>PlayChime</key>
-			<true/>
+			<string>Enabled</string>
 			<key>ResetTrafficClass</key>
 			<false/>
 			<key>SetupDelay</key>
