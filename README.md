@@ -1,5 +1,5 @@
 # Hackintosh-ThinkPad-E14
-Files required for prepping a Hackintosh on ThinkPad E14. This Hackintosh is not yet tested fully. There are some issues. Please join our Slack Workspace to be a part of this awesome team by using this link - https://join.slack.com/t/slack-xcj2393/shared_invite/zt-rw7vy0og-H2bzOZoMcMFIftK~rZ6MyQ. 
+Files required for prepping a Hackintosh on ThinkPad E14. This Hackintosh is not yet tested fully. There are some issues. Please join our Slack Workspace to be a part of this awesome team by using this link - https://join.slack.com/t/hackintoshthinkpade14/shared_invite/zt-txdirqpz-xzW89SOpF~48nH_a07f0Yg. 
 
 ## Method Used
 Dortania's OpenCore Install Guide - https://dortania.github.io/OpenCore-Install-Guide/
